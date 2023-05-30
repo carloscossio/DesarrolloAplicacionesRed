@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Formulario de Registro</h1>
+
+  <form action="enviar.php" method="POST">
+    <label for="nombre">Nombre completo:</label>
+    <input type="text" id="nombre" name="nombre" required>
+
+    <label for="correo">Dirección de correo electrónico:</label>
+    <input type="email" id="correo" name="correo" required>
+
+    <label for="telefono">Número de teléfono:</label>
+    <input type="text" id="telefono" name="telefono" required>
+
+    <label for="ocupacion">Ocupación:</label>
+    <input type="text" id="ocupacion" name="ocupacion" required>
+
+    <label for="categoria">Categoría de participación:</label>
+    <select id="categoria" name="categoria" required>
+      <option value="opcion1">Estudiante</option>
+      <option value="opcion2">Profesional</option>
+      <option value="opcion3">Asistente</option>
+      <option value="opcion4">Educador</option>
+      <!-- Agrega más opciones según tus necesidades -->
+    </select>
+
+    <input type="submit" value="Enviar">
+  </form>
+</body>
+</html>
