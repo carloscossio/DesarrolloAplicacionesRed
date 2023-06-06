@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratorio</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="./js/script1.js">Script</script>
+    <script src="./js/script2.js">Script</script>
+    <script src="./js/script3.js">Script</script>
+    <script src="./js/script4.js">Script</script>
+
+</head>
+<body>
+
+<h1>Ejercicios Laboratorio</h1>
+<p>Ejercicios del curso de Desarrollo de Aplicaciones en Red
+</p>
+<h2>JavaScript - Ejercicios</h2>
+    <u>
+        <li>
+            <button class="labBtn" onclick="ejercicio1()">Ejercicio 1</button>
+            <button class="labBtn" onclick="ejercicio2()">Ejercicio 2</button>
+            <button class="labBtn" onclick="ejercicio3()">Ejercicio 3</button>
+            <button class="labBtn" onclick="ejercicio4()">Ejercicio 4</button>
+
+            <div id="palind" style="display: none;">
+                <h2>Palindroma - Ingresa una frase o palabra</h2>
+                <input type="text" id="cadena">
+                <button class="labBtn" onclick="palindroma()">Enviar</button>
+            </div>
+
+            <div id="numeros" style="display: none;">
+                <h2>Ingresa dos números</h2>
+                <input type="number" id="num1">
+                <input type="number" id="num2">
+                <button class="labBtn" onclick="compNum()">Enviar</button>
+            </div>
+
+            <div id="vocales" style="display: none;">
+                <h2>Vocales - Ingresa una frase</h2>
+                <input type="text" id="cadena2">
+                <button class="labBtn" onclick="vocales()">Enviar</button>
+            </div>
+
+            <div id="nroVocales" style="display: none;">
+                <h2>Número de Vocales - Ingresa una frase</h2>
+                <input type="text" id="cadena3">
+                <button class="labBtn" onclick="nroVocales()">Enviar</button>
+            </div>
+
+
+
+
+        </li>
+    </u>
+<h2>Ajax - Ejercicios</h2>
+<h2>URL de la página</h2>
+    <input type="text" id="urlInput">
+  
+    <script>
+     
+      var xhttp = new XMLHttpRequest();
+      
+      // Definir la función de respuesta
+      xhttp.onreadystatechange = function() {
+        if (this.readyState === 4 && this.status === 200) {
+          // Obtener la URL del servidor
+          var url = this.responseText;
+          
+          // Asignar la URL al valor del cuadro de texto
+          document.getElementById("urlInput").value = url;
+        }
+      };
+      
+      // Realizar la solicitud al servidor
+      xhttp.open("GET", window.location.href, true);
+      xhttp.send();
+    </script>
+<br>
+<br>
+<button onclick="loadDate[2]">Mostrar contenidos</button>
+<br>
+<br>
+<h2>Estado de la petición</h2>
+<div id="status">Estado: Completado</div>
+<br>
+<h2>Cabeceras HTTP de la respuesta del servidor</h2>
+<div id="headers">....</div>
+<h2>Código de Estado</h2>
+<div id="StatusCode">Código de Estado:200 Ok</div>
+<br>
+<h2>Contenidos</h2>
+<div id="content">....</div>
+<script></script>
+    <a class="button" href="index.html">Inicio</a>
+    <a class="button" href="registro.html">Registrarse</a>
+    <a class="button" href="sobremi.html">Sobre mí</a>
+    <a class="button" href="laboratorio.html">Laboratorio</a>
+</body>
+</html>
